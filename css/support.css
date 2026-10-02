@@ -1,0 +1,60 @@
+/* Support */
+
+.support {
+    padding: 90px 0;
+    background: var(--black-2);
+}
+
+.support__card {
+    position: relative;
+    border-radius: 22px;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    box-shadow: 0 50px 100px -50px rgba(0, 0, 0, 0.9);
+}
+
+.support__bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.5;
+}
+
+.support__content {
+    position: relative;
+    z-index: 1;
+    max-width: 640px;
+    margin-inline: auto;
+    padding: clamp(40px, 7vw, 84px) clamp(22px, 5vw, 60px);
+    text-align: center;
+    background: linear-gradient(180deg, rgba(10, 10, 12, 0.6), rgba(10, 10, 12, 0.85));
+}
+
+.support__badge {
+    display: inline-block;
+    padding: 7px 18px;
+    border: 1px solid rgba(255, 43, 71, 0.5);
+    border-radius: 999px;
+    color: var(--red-soft);
+    font-family: "Rajdhani", system-ui, sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 0.3em;
+    margin-bottom: 22px;
+}
+
+.support__title {
+    font-size: clamp(1.8rem, 4.4vw, 2.6rem);
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+}
+
+.support__desc {
+    color: #d9d9df;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}

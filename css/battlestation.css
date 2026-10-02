@@ -1,0 +1,62 @@
+/* Battlestation */
+
+.battlestation {
+    padding: 80px 0;
+    background: linear-gradient(180deg, var(--black) 0%, var(--black-2) 100%);
+    border-block: 1px solid var(--line);
+}
+
+.battlestation__grid {
+    display: grid;
+    grid-template-columns: 1fr 1.05fr;
+    gap: clamp(30px, 5vw, 70px);
+    align-items: center;
+}
+
+.battlestation__media {
+    margin: 0;
+    border-radius: var(--radius);
+    overflow: hidden;
+    border: 1px solid var(--line);
+    box-shadow: 0 40px 80px -40px rgba(0, 0, 0, 0.9);
+    transform: skewY(-1deg);
+}
+
+.battlestation__media img {
+    width: 100%;
+    filter: saturate(1.05);
+    transform: skewY(1deg) scale(1.08);
+}
+
+.battlestation__title {
+    font-size: clamp(1.9rem, 4.4vw, 2.7rem);
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+}
+
+.battlestation__title span {
+    color: var(--red-soft);
+}
+
+.battlestation__subtitle {
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: #fff;
+    margin: 28px 0 10px;
+}
+
+.battlestation__desc {
+    color: var(--muted);
+    font-size: 1.05rem;
+    line-height: 1.65;
+    margin-bottom: 14px;
+}
+
+@media (max-width: 900px) {
+    .battlestation__grid {
+        grid-template-columns: 1fr;
+    }
+}

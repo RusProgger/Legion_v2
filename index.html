@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#ff0030">
+    <link rel="icon" type="image/png" href="images/icon/sky-32.png" sizes="32x32">
+    <link rel="apple-touch-icon" sizes="32x32" href="images/icon/sky-32.png">
+    <meta name="description" content="Lenovo Legion Gaming — smarter play starts with Lenovo. The Legion notebook and gaming accessories.">
+    <title>Lenovo Legion — Gaming</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Preloader -->
+    <div class="preloader" id="preloader" aria-hidden="true">
+        <span class="preloader__ring"></span>
+    </div>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container header__inner">
+            <a class="logo" href="#home" aria-label="Legion notebook" title="Legion notebook">
+                <img class="logo__img" src="images/legion.png" alt="Legion logo">
+            </a>
+            <nav class="nav" id="nav" aria-label="Main navigation">
+                <a class="nav__link" href="#home">Home</a>
+                <a class="nav__link" href="#accessories">Accessories</a>
+                <a class="nav__link" href="#battlestation">Battlestation</a>
+                <a class="nav__link" href="#support">Support</a>
+                <a class="nav__link nav__cta" href="#shop">Shop now</a>
+            </nav>
+            <button class="burger" id="burger" type="button" aria-label="Toggle menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main class="page">
+
+        <!-- Hero -->
+        <section class="hero" id="home">
+            <div class="hero__bg" data-parallax aria-hidden="true"></div>
+            <div class="container hero__inner">
+                <div class="hero__content">
+                    <span class="hero__badge">New 2024 lineup</span>
+                    <h1 class="hero__title">Lenovo <span>Gaming</span></h1>
+                    <p class="hero__desc">Smarter play starts with Lenovo</p>
+                    <div class="hero__actions">
+                        <a class="btn btn--red" href="#shop">Shop now</a>
+                        <a class="btn btn--ghost" href="#specs">Explore specs</a>
+                    </div>
+                    <ul class="hero__chips">
+                        <li>13th Gen Intel® Core™ i5</li>
+                        <li>NVIDIA® GeForce RTX™ 4050</li>
+                        <li>16″ 144Hz WUXGA</li>
+                        <li>16 GB DDR5</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="hero__scroll" aria-hidden="true"><span></span></div>
+        </section>
+
+        <!-- Gaming Accessories -->
+        <section class="machine" id="accessories">
+            <div class="container">
+                <header class="section-head" data-reveal>
+                    <h2 class="section-title">Gaming <span>Accessories</span></h2>
+                    <p class="section-sub">Speed, sound and control — gear up every part of your setup with Legion accessories built for serious play.</p>
+                </header>
+
+                <div class="machine-cards">
+                    <article class="machine-card" data-reveal>
+                        <div class="machine-card__content">
+                            <div class="machine-card__media">
+                                <img src="images/resource/mice.png" alt="Gaming Mice" loading="lazy">
+                            </div>
+                            <h3>Gaming Mice</h3>
+                            <p>Speed & precision come together with a quality gaming mouse. Have the accuracy your game deserves.</p>
+                            <a class="machine-card__link" href="#shop">Shop gaming mice →</a>
+                        </div>
+                    </article>
+
+                    <article class="machine-card" data-reveal>
+                        <div class="machine-card__content">
+                            <div class="machine-card__media">
+                                <img src="images/resource/headsound.png" alt="Gaming Headsets" loading="lazy">
+                            </div>
+                            <h3>Gaming Headsets</h3>
+                            <p>Stay alert & make sure no one gets the drop on you with surround sound. Clearly with teammates.</p>
+                            <a class="machine-card__link" href="#shop">Shop gaming headsets →</a>
+                        </div>
+                    </article>
+
+                    <article class="machine-card" data-reveal>
+                        <div class="machine-card__content">
+                            <div class="machine-card__media">
+                                <img src="images/resource/keyboard.png" alt="Gaming Keyboards" loading="lazy">
+                            </div>
+                            <h3>Gaming Keyboards</h3>
+                            <p>Add performance to your play with a gaming keyboard featuring key binds, stylized lighting & more.</p>
+                            <a class="machine-card__link" href="#shop">Shop gaming keyboards →</a>
+                        </div>
+                    </article>
+
+                    <article class="machine-card" data-reveal>
+                        <div class="machine-card__content">
+                            <div class="machine-card__media">
+                                <img src="images/resource/monitor.png" alt="Gaming Monitors" loading="lazy">
+                            </div>
+                            <h3>Gaming Monitors</h3>
+                            <p>Compliment your gaming setup with a gaming monitor that can keep up with fast refresh rates, 4K resolutions & more.</p>
+                            <a class="machine-card__link" href="#shop">Shop gaming monitors →</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Battlestation -->
+        <section class="battlestation" id="battlestation">
+            <div class="container battlestation__grid">
+                <figure class="battlestation__media" data-reveal>
+                    <img src="images/sfir0wmxvaa8m9vwbyf9slxq4z8zla330994.webp" alt="A complete gaming battlestation" loading="lazy">
+                </figure>
+                <div class="battlestation__body" data-reveal>
+                    <h2 class="battlestation__title">Set Up Your <span>Battlestation</span></h2>
+                    <p class="battlestation__desc">There's more to competitive gaming than a top-notch PC. Whether you play at home, in the dorm room, or at the office, you need a gaming battlestation — where you, your rig, and your accessories merge to become a single dominant force.</p>
+                    <h3 class="battlestation__subtitle">Help Me Decide</h3>
+                    <p class="battlestation__desc">With so many great options there's not a wrong choice when it comes to picking a gaming machine. If you're stuck choosing between them, we have some suggestions based on what's most important to you.</p>
+                    <a class="link link--red" href="#shop">Help me decide →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Characteristics -->
+        <section class="characteristics" id="specs">
+            <div class="container">
+                <header class="section-head" data-reveal>
+                    <h2 class="section-title">Made to <span>Dominate</span></h2>
+                    <p class="section-sub">Inside the Legion notebook: a spec sheet built for esports-level frames and desktop-grade performance.</p>
+                </header>
+
+                <div class="specs-grid">
+                    <div class="spec" data-reveal>
+                        <h3 class="spec__title">Processor</h3>
+                        <p class="spec__desc">13th Generation Intel® Core™ i5-13500H Processor E-cores up to 3.50 GHz P-cores up to 4.70 GHz</p>
+                    </div>
+                    <div class="spec" data-reveal>
+                        <h3 class="spec__title">Operating System</h3>
+                        <p class="spec__desc">Windows 11 Home 64</p>
+                    </div>
+                    <div class="spec" data-reveal>
+                        <h3 class="spec__title">Graphic Card</h3>
+                        <p class="spec__desc">NVIDIA® GeForce RTX™ 4050 Laptop GPU 6GB GDDR6</p>
+                    </div>
+                    <div class="spec" data-reveal>
+                        <h3 class="spec__title">Memory</h3>
+                        <p class="spec__desc">16 GB DDR5-5200MHz (SODIMM) - (2 x 8 GB)</p>
+                    </div>
+                    <div class="spec" data-reveal>
+                        <h3 class="spec__title">Storage</h3>
+                        <p class="spec__desc">512 GB SSD M.2 2280 PCIe Gen4 TLC</p>
+                    </div>
+                    <div class="spec" data-reveal>
+                        <h3 class="spec__title">Display</h3>
+                        <p class="spec__desc">16″ WUXGA (1920 x 1200), IPS, Anti-Glare, Non-Touch, 300 nits, 144Hz, Narrow Bezel</p>
+                    </div>
+                    <div class="spec" data-reveal>
+                        <h3 class="spec__title">Camera</h3>
+                        <p class="spec__desc">1080P FHD with Dual Microphone and E-camera Shutter</p>
+                    </div>
+                    <div class="spec" data-reveal>
+                        <h3 class="spec__title">Keyboard</h3>
+                        <p class="spec__desc">4zone RGB Backlit, Storm Grey - English (US)</p>
+                    </div>
+                    <div class="spec" data-reveal>
+                        <h3 class="spec__title">WLAN</h3>
+                        <p class="spec__desc">Wi-Fi 6E 2x2 AX & Bluetooth® 5.1 or above</p>
+                    </div>
+                    <div class="spec" data-reveal>
+                        <h3 class="spec__title">Warranty</h3>
+                        <p class="spec__desc">One Year Legion Ultimate Support</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Support -->
+        <section class="support" id="support">
+            <div class="support__card" data-reveal>
+                <img class="support__bg" src="images/legion-bg.avif" alt="" aria-hidden="true">
+                <div class="support__content">
+                    <span class="support__badge">24/7</span>
+                    <h2 class="support__title">Legion Ultimate Support</h2>
+                    <p class="support__desc">Legion Ultimate Support is here to be your META — Most Effective Tactic Available. With one point of contact, get 24/7 gamer-centric support from a team of IT and gaming experts who can help optimize your hardware and software settings. Legion Ultimate Support pros will keep you productive all day and unbeatable at night.</p>
+                    <a class="btn btn--ghost" href="#">Talk to a pro</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Compatible Accessories -->
+        <section class="shop" id="shop">
+            <div class="container">
+                <header class="section-head" data-reveal>
+                    <h2 class="section-title">Compatible <span>Accessories</span></h2>
+                    <p class="section-sub">Every Legion machine pairs perfectly with these accessories — grab what you need and get back to the match.</p>
+                </header>
+
+                <div class="slider" data-reveal>
+                    <div class="slider__track" id="sliderTrack">
+
+                        <article class="product">
+                            <div class="product__media"><img src="images/cards/monitor.avif" alt="Lenovo D27-40 Monitor" loading="lazy"></div>
+                            <div class="product__info">
+                                <h3 class="product__name">Lenovo D27-40 Monitor</h3>
+                                <p class="product__price">$169.99</p>
+                                <button class="btn btn--red btn--sm add-cart" type="button">Add to cart</button>
+                            </div>
+                        </article>
+
+                        <article class="product">
+                            <div class="product__media"><img src="images/cards/laptop-casual.avif" alt="15.6 inch Toploader T210" loading="lazy"></div>
+                            <div class="product__info">
+                                <h3 class="product__name">15.6″ Toploader T210</h3>
+                                <p class="product__price">$19.99</p>
+                                <button class="btn btn--red btn--sm add-cart" type="button">Add to cart</button>
+                            </div>
+                        </article>
+
+                        <article class="product">
+                            <div class="product__media"><img src="images/cards/keyboard.avif" alt="Wireless Keyboard" loading="lazy"></div>
+                            <div class="product__info">
+                                <h3 class="product__name">Wireless Keyboard</h3>
+                                <p class="product__price">$45.99</p>
+                                <button class="btn btn--red btn--sm add-cart" type="button">Add to cart</button>
+                            </div>
+                        </article>
+
+                        <article class="product">
+                            <div class="product__media"><img src="images/cards/4XD0X88524-560x450-01.a47ae7f0f962a994.avif" alt="Stereo USB Headset" loading="lazy"></div>
+                            <div class="product__info">
+                                <h3 class="product__name">Stereo USB Headset</h3>
+                                <p class="product__price">$22.99</p>
+                                <button class="btn btn--red btn--sm add-cart" type="button">Add to cart</button>
+                            </div>
+                        </article>
+
+                        <article class="product">
+                            <div class="product__media"><img src="images/cards/mon2.avif" alt="Lenovo L22e-40 21.45" loading="lazy"></div>
+                            <div class="product__info">
+                                <h3 class="product__name">Lenovo L22e-40 21.45</h3>
+                                <p class="product__price">$119.99</p>
+                                <button class="btn btn--red btn--sm add-cart" type="button">Add to cart</button>
+                            </div>
+                        </article>
+
+                        <article class="product">
+                            <div class="product__media"><img src="images/cards/headset-usb.avif" alt="Headphone Gen II" loading="lazy"></div>
+                            <div class="product__info">
+                                <h3 class="product__name">Headphone Gen II</h3>
+                                <p class="product__price">$7.99</p>
+                                <button class="btn btn--red btn--sm add-cart" type="button">Add to cart</button>
+                            </div>
+                        </article>
+
+                        <article class="product">
+                            <div class="product__media"><img src="images/cards/adapter.avif" alt="USB-C 65W Wall Adapter" loading="lazy"></div>
+                            <div class="product__info">
+                                <h3 class="product__name">USB-C 65W Wall Adapter</h3>
+                                <p class="product__price">$29.99</p>
+                                <button class="btn btn--red btn--sm add-cart" type="button">Add to cart</button>
+                            </div>
+                        </article>
+
+                        <article class="product">
+                            <div class="product__media"><img src="images/cards/multiport.avif" alt="130W Multi-Port Charger" loading="lazy"></div>
+                            <div class="product__info">
+                                <h3 class="product__name">130W Multi-Port Charger</h3>
+                                <p class="product__price">$69.99</p>
+                                <button class="btn btn--red btn--sm add-cart" type="button">Add to cart</button>
+                            </div>
+                        </article>
+
+                    </div>
+
+                    <div class="slider__controls">
+                        <button class="slider__btn" id="prevBtn" type="button" aria-label="Previous">‹</button>
+                        <div class="slider__dots" id="dots" role="tablist"></div>
+                        <button class="slider__btn" id="nextBtn" type="button" aria-label="Next">›</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container footer__top">
+            <div class="footer__brand">
+                <img class="footer__logo" src="images/legion.png" alt="Legion">
+                <p>Smarter play starts with Lenovo.</p>
+            </div>
+            <div class="footer__col">
+                <h4>Accessories</h4>
+                <a href="#accessories">Gaming mice</a>
+                <a href="#accessories">Headsets</a>
+                <a href="#accessories">Keyboards</a>
+                <a href="#accessories">Monitors</a>
+            </div>
+            <div class="footer__col">
+                <h4>Company</h4>
+                <a href="#home">About Legion</a>
+                <a href="#support">Newsroom</a>
+                <a href="#specs">Careers</a>
+                <a href="#shop">Investors</a>
+            </div>
+            <div class="footer__col">
+                <h4>Support</h4>
+                <a href="#support">Support hub</a>
+                <a href="#support">Drivers</a>
+                <a href="#support">Warranty</a>
+                <a href="#support">Contact</a>
+            </div>
+        </div>
+        <div class="container footer__bottom">
+            <p>© <span id="year"></span> Lenovo. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

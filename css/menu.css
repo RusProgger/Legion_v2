@@ -1,0 +1,136 @@
+/* Menu + burger */
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: clamp(18px, 2.6vw, 34px);
+}
+
+.nav__link {
+    position: relative;
+    color: #d4d4da;
+    text-transform: uppercase;
+    font-size: 0.86rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    padding: 4px 0;
+    transition: color var(--ts);
+}
+
+.nav__link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+    background: var(--grad-red);
+    transition: width 0.3s ease;
+}
+
+.nav__link:hover,
+.nav__link.is-active {
+    color: #fff;
+}
+
+.nav__link:hover::after,
+.nav__link.is-active::after {
+    width: 100%;
+}
+
+.nav__cta {
+    padding: 11px 20px;
+    border-radius: 6px;
+    background: var(--grad-red);
+    color: #fff;
+    box-shadow: 0 14px 30px -14px rgba(255, 0, 48, 0.8);
+    transition: transform var(--ts), box-shadow var(--ts);
+}
+
+.nav__cta::after {
+    display: none;
+}
+
+.nav__cta:hover {
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 20px 36px -14px rgba(255, 0, 48, 0.9);
+}
+
+.burger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    padding: 8px;
+    background: none;
+    border: 0;
+}
+
+.burger span {
+    width: 26px;
+    height: 2px;
+    border-radius: 2px;
+    background: #fff;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.burger.is-open span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+.burger.is-open span:nth-child(2) {
+    opacity: 0;
+}
+.burger.is-open span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+/* Mobile */
+@media (max-width: 860px) {
+    /* без blur: backdrop-filter на родителе ломает position:fixed меню */
+    .header.is-scrolled {
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+        background: rgba(10, 10, 12, 0.94);
+    }
+
+    .nav {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: min(78vw, 300px);
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-start;
+        gap: 6px;
+        padding: 90px 30px 30px;
+        background: rgba(10, 10, 12, 0.97);
+        border-left: 1px solid var(--line);
+        transform: translateX(100%);
+        transition: transform 0.35s ease;
+    }
+
+    .nav.is-open {
+        transform: none;
+    }
+
+    .nav__link {
+        padding: 14px 0;
+        font-size: 1rem;
+        border-bottom: 1px solid var(--line);
+    }
+
+    .nav__link::after {
+        display: none;
+    }
+
+    .nav__cta {
+        margin-top: 14px;
+        text-align: center;
+    }
+
+    .burger {
+        display: flex;
+        z-index: 10;
+    }
+}

@@ -1,0 +1,219 @@
+@import url("preloader.css");
+@import url("container.css");
+@import url("header.css");
+@import url("menu.css");
+@import url("hero.css");
+@import url("machine.css");
+@import url("battlestation.css");
+@import url("characteristics.css");
+@import url("support.css");
+@import url("compatible.css");
+@import url("footer.css");
+
+:root {
+    --black: #0a0a0c;
+    --black-2: #101014;
+    --card: #141419;
+    --line: rgba(255, 255, 255, 0.08);
+    --txt: #f4f4f5;
+    --muted: #9a9aa3;
+    --red: #ff0030;
+    --red-soft: #ff2b47;
+    --red-dark: #b00022;
+    --grad-red: linear-gradient(100deg, var(--red-soft), var(--red));
+    --radius: 14px;
+    --ts: 0.25s ease;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+body {
+    margin: 0;
+    font-family: "Inter", system-ui, sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--txt);
+    background: var(--black);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeSpeed;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, .logo, .hero__badge {
+    font-family: "Rajdhani", system-ui, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+}
+
+::selection {
+    background: var(--red);
+    color: #fff;
+}
+
+::-webkit-scrollbar {
+    width: 11px;
+}
+::-webkit-scrollbar-track {
+    background: var(--black-2);
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    background: linear-gradient(var(--red-soft), var(--red-dark));
+}
+
+/* ---------- Общие блоки ---------- */
+
+.section-head {
+    max-width: 640px;
+    margin: 0 auto 56px;
+    text-align: center;
+}
+
+.section-title {
+    font-size: clamp(2rem, 5vw, 2.9rem);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    margin-bottom: 14px;
+}
+
+.section-title span {
+    color: var(--red-soft);
+}
+
+.section-sub {
+    color: var(--muted);
+    font-size: 1.02rem;
+}
+
+/* ---------- Кнопки ---------- */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 15px 32px;
+    border-radius: 8px;
+    font-size: 0.92rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    border: 1px solid transparent;
+    background: transparent;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    transition: transform var(--ts), box-shadow var(--ts), background var(--ts), color var(--ts), border-color var(--ts);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, calc(100% - 14px) 100%, 0 calc(100% - 14px));
+}
+
+.btn--red {
+    background: var(--grad-red);
+    box-shadow: 0 18px 40px -16px rgba(255, 0, 48, 0.7);
+}
+
+.btn--red:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 26px 48px -16px rgba(255, 0, 48, 0.85);
+}
+
+.btn--ghost {
+    border-color: rgba(255, 255, 255, 0.35);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, calc(100% - 14px) 100%, 0 calc(100% - 14px));
+}
+
+.btn--ghost:hover {
+    border-color: var(--red-soft);
+    color: var(--red-soft);
+    transform: translateY(-2px);
+}
+
+.btn--sm {
+    padding: 12px 24px;
+    font-size: 0.82rem;
+}
+
+.link {
+    display: inline-block;
+    font-weight: 600;
+    transition: color var(--ts);
+}
+
+.link--red {
+    color: var(--red-soft);
+}
+
+.link--red:hover {
+    color: #fff;
+}
+
+/* ---------- Появление при скролле ---------- */
+
+[data-reveal] {
+    opacity: 0;
+    transform: translateY(26px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+[data-reveal].is-in {
+    opacity: 1;
+    transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    [data-reveal] {
+        opacity: 1;
+        transform: none;
+    }
+}

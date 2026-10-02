@@ -1,0 +1,155 @@
+/* Compatible — слайдер без jQuery */
+
+.shop {
+    padding: 90px 0;
+    background:
+        radial-gradient(900px 400px at 50% 0%, rgba(255, 0, 48, 0.08), transparent 60%),
+        var(--black);
+}
+
+.slider {
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 8px;
+}
+
+.slider__track {
+    display: flex;
+    gap: 20px;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.slider__track.no-anim {
+    transition: none;
+}
+
+.product {
+    flex: 0 0 calc(25% - 15px);
+    min-width: 0;
+    border-radius: var(--radius);
+    background: var(--card);
+    border: 1px solid var(--line);
+    overflow: hidden;
+    transition: transform var(--ts), border-color var(--ts), box-shadow var(--ts);
+}
+
+.product:hover {
+    transform: translateY(-6px);
+    border-color: rgba(255, 0, 48, 0.45);
+    box-shadow: 0 28px 56px -28px rgba(255, 0, 48, 0.45);
+}
+
+.product__media {
+    height: 190px;
+    display: grid;
+    place-items: center;
+    padding: 18px;
+    background:
+        radial-gradient(240px 140px at 50% 30%, rgba(255, 0, 48, 0.14), transparent 70%),
+        #0d0d11;
+}
+
+.product__media img {
+    max-width: 150px;
+    max-height: 150px;
+    transition: transform 0.4s ease;
+}
+
+.product:hover .product__media img {
+    transform: scale(1.07);
+}
+
+.product__info {
+    padding: 18px 20px 22px;
+    text-align: center;
+    border-top: 1px solid var(--line);
+}
+
+.product__name {
+    font-size: 1.05rem;
+    font-weight: 600;
+    min-height: 2.4em;
+    display: grid;
+    align-items: center;
+}
+
+.product__price {
+    font-family: "Rajdhani", system-ui, sans-serif;
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: #fff;
+    margin: 8px 0 14px;
+}
+
+.product__info .btn {
+    width: 100%;
+}
+
+/* Controls */
+
+.slider__controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 22px;
+    margin-top: 34px;
+}
+
+.slider__btn {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    border: 1px solid var(--line);
+    background: rgba(255, 255, 255, 0.04);
+    color: #fff;
+    font-size: 1.5rem;
+    line-height: 1;
+    display: grid;
+    place-items: center;
+    transition: border-color var(--ts), background var(--ts), transform var(--ts);
+}
+
+.slider__btn:hover {
+    border-color: var(--red-soft);
+    background: rgba(255, 0, 48, 0.12);
+    transform: scale(1.06);
+}
+
+.slider__dots {
+    display: flex;
+    gap: 8px;
+}
+
+.slider__dot {
+    width: 9px;
+    height: 9px;
+    padding: 0;
+    border: 0;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.22);
+    transition: background var(--ts), transform var(--ts), width var(--ts);
+}
+
+.slider__dot.is-active {
+    width: 26px;
+    background: var(--red-soft);
+}
+
+/* Responsive */
+@media (max-width: 1000px) {
+    .product {
+        flex-basis: calc(33.333% - 13.5px);
+    }
+}
+
+@media (max-width: 700px) {
+    .product {
+        flex-basis: calc(50% - 10px);
+    }
+}
+
+@media (max-width: 460px) {
+    .product {
+        flex-basis: 100%;
+    }
+}
